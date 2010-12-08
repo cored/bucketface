@@ -33,3 +33,6 @@ def stub_request(method, url, filename, status=nil)
 
   FakeWeb.register_uri(method, bitbucket_url(url, options))
 end
+
+def stub_get(*args); stub_request(:get, *args) end
+def stub_post(*args); stub_request(:post, *args) end
