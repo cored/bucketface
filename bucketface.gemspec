@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_development_dependency('fakeweb', '~> 1.3')
-  s.add_development_dependency('jnumemaker-matchy', '~> 0.4.0')
+  s.add_development_dependency('jnunemaker-matchy', '~> 0.4.0')
   s.add_development_dependency('mocha', '~> 0.9')
   s.add_development_dependency('shoulda', '~> 2.11')
   s.add_runtime_dependency('hashie', '~> 0.4.0')
