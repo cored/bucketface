@@ -1,0 +1,11 @@
+{"repositories"=>
+  [{"website"=>"",
+    "slug"=>"test-repo",
+    "name"=>"test-repo",
+    "followers_count"=>1,
+    "description"=>"Testing ticketmaster with this repo"}],
+ "user"=>
+  {"username"=>"cored",
+   "first_name"=>"",
+   "last_name"=>"",
+   "resource_uri"=>"/1.0/users/cored/"}}
