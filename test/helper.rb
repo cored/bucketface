@@ -22,16 +22,16 @@ def fixture_file(filename)
 end
 
 def bitbucket_url(url)
-  url =~ /^http/ ? url : 'https://api.bitbucket.org/1.0'
+  url =~ /^https/ ? url : "https://api.bitbucket.org/1.0"
 end
 
 def stub_request(method, url, filename, status=nil)
-  options = {:body => ''}
+  options = {:body => ""}
   options.merge!({:body => fixture_file(filename)}) if filename
   options.merge!({:body => status.last}) if status
   options.merge!({:status => status}) if status
 
-  FakeWeb.register_uri(method, bitbucket_url(url, options))
+  FakeWeb.register_uri(method, bitbucket_url(url), options) 
 end
 
 def stub_get(*args); stub_request(:get, *args) end
