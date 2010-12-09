@@ -1,0 +1,51 @@
+{
+    "count": 2, 
+    "filter": {}, 
+    "search": null, 
+    "issues": [
+        {
+            "title": "Another issue test", 
+            "reported_by": {
+                "username": "cored", 
+                "first_name": "Rafael", 
+                "last_name": "George", 
+                "resource_uri": "/1.0/users/cored/"
+            }, 
+            "comment_count": 0, 
+            "content": "Test", 
+            "created_on": "2010-12-06 20:16:38", 
+            "local_id": 2, 
+            "follower_count": 1, 
+            "metadata": {
+                "kind": "bug", 
+                "version": null, 
+                "component": null, 
+                "milestone": null
+            }, 
+            "resource_uri": "/1.0/repositories/cored/test-repo/issues/2/", 
+            "is_spam": false
+        }, 
+        {
+            "title": "Test issue", 
+            "reported_by": {
+                "username": "cored", 
+                "first_name": "Rafael", 
+                "last_name": "George", 
+                "resource_uri": "/1.0/users/cored/"
+            }, 
+            "comment_count": 0, 
+            "content": "Testing with this issue ticketmaster", 
+            "created_on": "2010-11-29 16:20:57", 
+            "local_id": 1, 
+            "follower_count": 1, 
+            "metadata": {
+                "kind": "bug", 
+                "version": null, 
+                "component": null, 
+                "milestone": null
+            }, 
+            "resource_uri": "/1.0/repositories/cored/test-repo/issues/1/", 
+            "is_spam": false
+        }
+    ]
+}

@@ -1,0 +1,148 @@
+{
+    "0.6.3": {
+        "node": "ad6fe150daaa", 
+        "files": [
+            {
+                "type": "modified", 
+                "file": "setup.py"
+            }
+        ], 
+        "author": "percious", 
+        "timestamp": "2009-07-06 20:21:55", 
+        "raw_node": "ad6fe150daaa927da774b073db57892646ac7b8f", 
+        "parents": [
+            "aec10bc1863a"
+        ], 
+        "branch": "default", 
+        "message": "fix tw dependency", 
+        "revision": 115, 
+        "size": 2
+    }, 
+    "0.6.2": {
+        "node": "8f3756483a8d", 
+        "files": [
+            {
+                "type": "modified", 
+                "file": "tests/test_formbase.py"
+            }, 
+            {
+                "type": "modified", 
+                "file": "sprox/formbase.py"
+            }, 
+            {
+                "type": "modified", 
+                "file": "sprox/fillerbase.py"
+            }, 
+            {
+                "type": "modified", 
+                "file": "sprox/release.py"
+            }, 
+            {
+                "type": "modified", 
+                "file": "sprox/dojo/formbase.py"
+            }, 
+            {
+                "type": "modified", 
+                "file": "sprox/saormprovider.py"
+            }, 
+            {
+                "type": "modified", 
+                "file": "sprox/viewbase.py"
+            }
+        ], 
+        "author": "percious", 
+        "timestamp": "2009-06-10 00:11:02", 
+        "raw_node": "8f3756483a8df8c9934bd1a16f95cee96666a6bd", 
+        "parents": [
+            "14dd62fc0920"
+        ], 
+        "branch": "default", 
+        "message": "a couple of fixes based on work done for the table and form tutorials.", 
+        "revision": 109, 
+        "size": 1896
+    }, 
+    "0.6.1": {
+        "node": "82793317fd85", 
+        "files": [
+            {
+                "type": "modified", 
+                "file": "sprox/release.py"
+            }, 
+            {
+                "type": "modified", 
+                "file": "sprox/dojo/formbase.py"
+            }
+        ], 
+        "author": "percious", 
+        "timestamp": "2009-06-05 20:32:11", 
+        "raw_node": "82793317fd85b4cd7feff45ba2e9e7bf85fcc591", 
+        "parents": [
+            "caa32d1d0f76"
+        ], 
+        "branch": "default", 
+        "message": "somehow sprox.AddRecordBase got lost.  Put it back. forces sprox 0.6.1", 
+        "revision": 107, 
+        "size": 2257
+    }, 
+    "tip": {
+        "node": "10c1068f1171", 
+        "files": [], 
+        "author": "elpargo", 
+        "timestamp": "2009-08-26 17:11:33", 
+        "raw_node": "10c1068f117163e7c3e98d2a461799481367b727", 
+        "parents": [
+            "041529d47395", 
+            "b119fb3263f7"
+        ], 
+        "branch": "default", 
+        "message": "- merging", 
+        "revision": 132, 
+        "size": 0
+    }, 
+    "0.6": {
+        "node": "a05b4e33cebf", 
+        "files": [
+            {
+                "type": "modified", 
+                "file": "setup.py"
+            }, 
+            {
+                "type": "modified", 
+                "file": "setup.cfg"
+            }
+        ], 
+        "author": "percious", 
+        "timestamp": "2009-06-05 20:17:53", 
+        "raw_node": "a05b4e33cebfed895423565bda18e2f1460a7a53", 
+        "parents": [
+            "1a6e452deb3b"
+        ], 
+        "branch": "default", 
+        "message": "pre-0.6 release updates to setup.py/cfg", 
+        "revision": 105, 
+        "size": 112
+    }, 
+    "0.6.4": {
+        "node": "fd8427b8b5a5", 
+        "files": [
+            {
+                "type": "modified", 
+                "file": "CHANGELOG.txt"
+            }, 
+            {
+                "type": "modified", 
+                "file": "sprox/release.py"
+            }
+        ], 
+        "author": "percious", 
+        "timestamp": "2009-08-04 18:19:29", 
+        "raw_node": "fd8427b8b5a5276c6150918395424abb6d6e8070", 
+        "parents": [
+            "dae71582eb6f"
+        ], 
+        "branch": "default", 
+        "message": "marking 0.6.4", 
+        "revision": 123, 
+        "size": 1044
+    }
+}

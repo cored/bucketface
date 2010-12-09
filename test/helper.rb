@@ -22,7 +22,7 @@ def fixture_file(filename)
 end
 
 def bitbucket_url(url)
-  url =~ /^https/ ? url : "https://api.bitbucket.org/1.0"
+  url =~ /^https/ ? url : "https://api.bitbucket.org/1.0#{url}"
 end
 
 def stub_request(method, url, filename, status=nil)
