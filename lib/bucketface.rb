@@ -25,6 +25,12 @@ module Bucketface
   def self.client; Client.new end
 
   # Users
-  def_delegators :client, :user
+  def_delegators :client, :user, :followers 
+
+  # Repositories
+  def_delegators :client, :repo_followers, :repo, :list_repos, :branches, :tags
+
+  # Issues
+  def_delegators :client, :issue_followers, :issues, :issue
 
 end

@@ -1,0 +1,11 @@
+{
+    "count": 1, 
+    "followers": [
+        {
+            "username": "cored", 
+            "first_name": "Rafael", 
+            "last_name": "George", 
+            "resource_uri": "/1.0/users/cored/"
+        }
+    ]
+}
