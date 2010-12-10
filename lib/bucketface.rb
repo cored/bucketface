@@ -33,4 +33,9 @@ module Bucketface
   # Issues
   def_delegators :client, :issue_followers, :issues, :issue
 
+  # Changesets
+  def_delegators :client, :changesets, :changeset
+
+  # Events
+  def_delegators :client, :events, :repo_events
 end

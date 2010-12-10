@@ -18,43 +18,79 @@ module Bucketface
     end
 
     def user(login=self.login)
-      get_resource("/users/#{login}/").user
+      get("/users/#{login}/").user
     end
 
     def followers(login=self.login)
       get("/users/#{login}/followers/").followers
     end
 
-    def repo_followers(args = {})
-      get("/repositories/#{args[:user]}/#{args[:repository]}/followers/").followers
+    def repo_followers(repo)
+      repo = Repository.new(repo)
+      get("/repositories/#{repo.user}/#{repo.to_s}/followers/").followers
     end
 
-    def issue_followers(args = {})
-      get("/repositories/#{args[:user]}/#{args[:repository]}/issues/#{args[:issue_id]}/followers/").followers
+    def issue_followers(repo, id)
+      repo = Repository.new(repo)
+      get("/repositories/#{repo.user}/#{repo.to_s}/issues/#{id}/followers/").followers
     end
 
-    def issues(args = {})
-      get("/repositories/#{args[:user]}/#{args[:repository]}/issues/").issues
+    def issues(repo)
+      repo = Repository.new(repo)
+      get("/repositories/#{repo.user}/#{repo.to_s}/issues/").issues
     end
 
-    def issue(args = {})
-      get("/repositories/#{args[:user]}/#{args[:repository]}/issues/#{args[:issue_id]}/")
+    def issue(repo, id)
+      repo = Repository.new(repo)
+      get("/repositories/#{repo.user}/#{repo.to_s}/issues/#{id}/")
     end
 
-    def repo(args = {})
-      get("/repositories/#{args[:user]}/#{args[:repository]}/")
+    def repo(repo)
+      repo = Repository.new(repo)
+      get("/repositories/#{repo.user}/#{repo.to_s}/")
     end
 
     def list_repos(login=self.login)
       get("/users/#{login}/").repositories
     end
 
-    def branches(args = {})
-      get("/repositories/#{args[:user]}/#{args[:repository]}/branches/")
+    def branches(repo)
+      repo = Repository.new(repo)
+      get("/repositories/#{repo.user}/#{repo.to_s}/branches/")
     end
 
-    def tags(args = {})
-      get("/repositories/#{args[:user]}/#{args[:repository]}/tags/")
+    def tags(repo)
+      repo = Repository.new(repo)
+      get("/repositories/#{repo.user}/#{repo.to_s}/tags/")
+    end
+
+    def open_issue(repo, title, body)
+      rep = Repository.new(repo)
+      post("/repositories/#{rep.user}/#{rep.to_s}/issues/", :body => {:title => title, :content => body})
+    end
+
+    def close_issue(repo, id)
+      repo = Repository.new(repo)
+      delete("/repositories/#{repo.user}/#{repo.to_s}/issues/#{id}/")
+    end
+
+    def changesets(repo)
+      repo = Repository.new(repo)
+      get_resource("/repositories/#{repo.user}/#{repo.to_s}/changesets/").changesets
+    end
+
+    def changeset(repo, changeset)
+      repo = Repository.new(repo)
+      get("/repositories/#{repo.user}/#{repo.to_s}/changesets/#{changeset}/")
+    end
+
+    def events(login=self.login)
+      get("/users/#{login}/events/").events
+    end
+    
+    def repo_events(repo)
+      repo = Repository.new(repo)
+      get("/repositories/#{repo.user}/#{repo.to_s}/events/").events
     end
 
     private
@@ -62,8 +98,30 @@ module Bucketface
       Hashie::Mash.new(self.class.get(path, options))
     end
 
+    def post(path, options = {})
+      Hashie::Mash.new(self.class.post(path, options))
+    end
+
+    def delete(path, options = {})
+      self.class.delete(path, options)
+    end
+
     def get_resource(path, options ={})
       get(path, {:query => options})
+    end
+
+    def post_resource(path, options = {})
+      post(path, options)
+    end
+
+    def self.delete(*args); handle_response super end
+
+    def self.handle_response(response)
+      case response.code
+      when 204        then return "Success!"
+      else
+        response
+      end
     end
   end
 end

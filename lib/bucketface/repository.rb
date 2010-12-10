@@ -20,5 +20,9 @@ module Bucketface
     def user
       @username
     end
+
+    def to_s
+      @name
+    end
   end
 end

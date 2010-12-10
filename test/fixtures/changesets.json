@@ -1,0 +1,360 @@
+{
+    "count": 133, 
+    "start": "tip", 
+    "limit": 15, 
+    "changesets": [
+        {
+            "node": "1ab488c3e61e", 
+            "files": [
+                {
+                    "type": "modified", 
+                    "file": "sprox/saormprovider.py"
+                }
+            ], 
+            "author": "\"Edw...@thewritingpot.com>\"", 
+            "timestamp": "2009-07-13 20:09:19", 
+            "raw_node": "1ab488c3e61ec2e16dad9059134a25d865896783", 
+            "parents": [
+                "48bbbf2d4567"
+            ], 
+            "branch": "default", 
+            "message": "Add support for interval SQLAlchemy datatype.", 
+            "revision": 118, 
+            "size": 548
+        }, 
+        {
+            "node": "77b9d1b64885", 
+            "files": [
+                {
+                    "type": "modified", 
+                    "file": "tests/test_saormprovider.py"
+                }, 
+                {
+                    "type": "modified", 
+                    "file": "sprox/test/model.py"
+                }, 
+                {
+                    "type": "modified", 
+                    "file": "tests/test_metadata.py"
+                }
+            ], 
+            "author": "\"Edw...@mit.edu>\"", 
+            "timestamp": "2009-07-14 01:20:14", 
+            "raw_node": "77b9d1b64885099e3db0bad536e79e2517ab14a1", 
+            "parents": [
+                "1ab488c3e61e"
+            ], 
+            "branch": "default", 
+            "message": "Add test for Interval datatype.", 
+            "revision": 119, 
+            "size": 333
+        }, 
+        {
+            "node": "2f82ce398c13", 
+            "files": [
+                {
+                    "type": "modified", 
+                    "file": "sprox/formbase.py"
+                }
+            ], 
+            "author": "percious", 
+            "timestamp": "2009-08-04 00:04:07", 
+            "raw_node": "2f82ce398c1315331723fd685278a1f83168987b", 
+            "parents": [
+                "77b9d1b64885"
+            ], 
+            "branch": "default", 
+            "message": "fixed FilterinSchema on formbase to allow missing keys.", 
+            "revision": 120, 
+            "size": 120
+        }, 
+        {
+            "node": "0e616f3ec900", 
+            "files": [
+                {
+                    "type": "modified", 
+                    "file": "sprox/formbase.py"
+                }, 
+                {
+                    "type": "modified", 
+                    "file": ".hgignore"
+                }, 
+                {
+                    "type": "added", 
+                    "file": "sprox/widgets/templates/hidden_put.html"
+                }, 
+                {
+                    "type": "modified", 
+                    "file": "sprox/widgets/widgets.py"
+                }
+            ], 
+            "author": "percious", 
+            "timestamp": "2009-08-04 00:26:38", 
+            "raw_node": "0e616f3ec9005a2f8bb262438da572b64b582ae9", 
+            "parents": [
+                "2f82ce398c13"
+            ], 
+            "branch": "default", 
+            "message": "gave hidden put template it's own file.", 
+            "revision": 121, 
+            "size": 442
+        }, 
+        {
+            "node": "dae71582eb6f", 
+            "files": [
+                {
+                    "type": "modified", 
+                    "file": "sprox/formbase.py"
+                }, 
+                {
+                    "type": "modified", 
+                    "file": "sprox/dojo/formbase.py"
+                }
+            ], 
+            "author": "percious", 
+            "timestamp": "2009-08-04 16:53:14", 
+            "raw_node": "dae71582eb6f69071754faf5c8c3238bd851d0d4", 
+            "parents": [
+                "0e616f3ec900"
+            ], 
+            "branch": "default", 
+            "message": "fixes _method giving a missing value error.", 
+            "revision": 122, 
+            "size": 121
+        }, 
+        {
+            "node": "fd8427b8b5a5", 
+            "files": [
+                {
+                    "type": "modified", 
+                    "file": "CHANGELOG.txt"
+                }, 
+                {
+                    "type": "modified", 
+                    "file": "sprox/release.py"
+                }
+            ], 
+            "author": "percious", 
+            "timestamp": "2009-08-04 18:19:29", 
+            "raw_node": "fd8427b8b5a5276c6150918395424abb6d6e8070", 
+            "parents": [
+                "dae71582eb6f"
+            ], 
+            "branch": "default", 
+            "message": "marking 0.6.4", 
+            "revision": 123, 
+            "size": 1044
+        }, 
+        {
+            "node": "957b4e1f336f", 
+            "files": [
+                {
+                    "type": "modified", 
+                    "file": ".hgtags"
+                }
+            ], 
+            "author": "percious", 
+            "timestamp": "2009-08-04 18:19:35", 
+            "raw_node": "957b4e1f336f3fa8eba3663cdf826db14acdba93", 
+            "parents": [
+                "fd8427b8b5a5"
+            ], 
+            "branch": "default", 
+            "message": "Added tag 0.6.4 for changeset fd8427b8b5a5", 
+            "revision": 124, 
+            "size": 47
+        }, 
+        {
+            "node": "49755feea5f0", 
+            "files": [
+                {
+                    "type": "modified", 
+                    "file": "sprox/widgets/templates/dojogrid.html"
+                }, 
+                {
+                    "type": "modified", 
+                    "file": "sprox/widgets/dojo.py"
+                }, 
+                {
+                    "type": "added", 
+                    "file": "sprox/widgets/static/dojo_grid.js"
+                }
+            ], 
+            "author": "percious", 
+            "timestamp": "2009-08-25 07:51:54", 
+            "raw_node": "49755feea5f0892dbcfc4399415ad62de781cd4c", 
+            "parents": [
+                "957b4e1f336f"
+            ], 
+            "branch": "default", 
+            "message": "feeble attempt to make IE work.", 
+            "revision": 125, 
+            "size": 1687
+        }, 
+        {
+            "node": "e32e2d0c0028", 
+            "files": [
+                {
+                    "type": "modified", 
+                    "file": "sprox/widgets/dojo.py"
+                }, 
+                {
+                    "type": "modified", 
+                    "file": "sprox/widgets/static/dojo_grid.js"
+                }
+            ], 
+            "author": "percious", 
+            "timestamp": "2009-08-25 08:07:45", 
+            "raw_node": "e32e2d0c00280d467493560a405bbfe82672c2d5", 
+            "parents": [
+                "49755feea5f0"
+            ], 
+            "branch": "default", 
+            "message": "more ie wankering.", 
+            "revision": 126, 
+            "size": 228
+        }, 
+        {
+            "node": "42b916bd20aa", 
+            "files": [
+                {
+                    "type": "modified", 
+                    "file": "MANIFEST.in"
+                }
+            ], 
+            "author": "percious", 
+            "timestamp": "2009-08-25 08:58:09", 
+            "raw_node": "42b916bd20aacc8e1bd10447b98b15e131606ca2", 
+            "parents": [
+                "e32e2d0c0028"
+            ], 
+            "branch": "default", 
+            "message": "forgot to add stuff to the manifest.", 
+            "revision": 127, 
+            "size": 41
+        }, 
+        {
+            "node": "1cd794394347", 
+            "files": [
+                {
+                    "type": "modified", 
+                    "file": "sprox/widgets/templates/dojogrid.html"
+                }, 
+                {
+                    "type": "modified", 
+                    "file": "sprox/widgets/dojo.py"
+                }
+            ], 
+            "author": "percious", 
+            "timestamp": "2009-08-25 10:46:29", 
+            "raw_node": "1cd79439434727b8e4b3cbf509a7acc56cfd2d29", 
+            "parents": [
+                "42b916bd20aa"
+            ], 
+            "branch": "default", 
+            "message": "fucking IE.", 
+            "revision": 128, 
+            "size": 409
+        }, 
+        {
+            "node": "b119fb3263f7", 
+            "files": [
+                {
+                    "type": "modified", 
+                    "file": "sprox/widgets/dojo.py"
+                }
+            ], 
+            "author": "percious", 
+            "timestamp": "2009-08-25 18:16:24", 
+            "raw_node": "b119fb3263f7026792e001a9053ece2f8b157a35", 
+            "parents": [
+                "1cd794394347"
+            ], 
+            "branch": "default", 
+            "message": "simplified sprox dojo widgets considerably.", 
+            "revision": 129, 
+            "size": 1686
+        }, 
+        {
+            "node": "0028aacefb28", 
+            "files": [
+                {
+                    "type": "modified", 
+                    "file": "sprox/iprovider.py"
+                }, 
+                {
+                    "type": "modified", 
+                    "file": "sprox/metadata.py"
+                }, 
+                {
+                    "type": "modified", 
+                    "file": "sprox/providerselector.py"
+                }, 
+                {
+                    "type": "modified", 
+                    "file": "sprox/saormprovider.py"
+                }
+            ], 
+            "author": "elpargo", 
+            "timestamp": "2009-08-26 17:06:09", 
+            "raw_node": "0028aacefb28ded40b2d429efbf0438e40fb754c", 
+            "parents": [
+                "957b4e1f336f"
+            ], 
+            "branch": "default", 
+            "message": "several minor bug fixes\n- iprovider.py missing methods\n- metadata.py fix for error handling\n- providerselector.py fix to the signature of get_provider\n- added comments to saormprovider.py regarding it's implementation", 
+            "revision": 130, 
+            "size": 324
+        }, 
+        {
+            "node": "041529d47395", 
+            "files": [
+                {
+                    "type": "modified", 
+                    "file": "sprox/iprovider.py"
+                }, 
+                {
+                    "type": "modified", 
+                    "file": "sprox/validatorselector.py"
+                }, 
+                {
+                    "type": "added", 
+                    "file": "sprox/mongokitprovider.py"
+                }, 
+                {
+                    "type": "modified", 
+                    "file": "sprox/providerselector.py"
+                }, 
+                {
+                    "type": "modified", 
+                    "file": "sprox/widgetselector.py"
+                }
+            ], 
+            "author": "elpargo", 
+            "timestamp": "2009-08-26 17:11:04", 
+            "raw_node": "041529d47395c79151040250bf863fdaec144936", 
+            "parents": [
+                "0028aacefb28"
+            ], 
+            "branch": "default", 
+            "message": "- initial support for Mongo using Mongokit, Currently only provider and widget selector, validators will come later", 
+            "revision": 131, 
+            "size": 7102
+        }, 
+        {
+            "node": "10c1068f1171", 
+            "files": [], 
+            "author": "elpargo", 
+            "timestamp": "2009-08-26 17:11:33", 
+            "raw_node": "10c1068f117163e7c3e98d2a461799481367b727", 
+            "parents": [
+                "041529d47395", 
+                "b119fb3263f7"
+            ], 
+            "branch": "default", 
+            "message": "- merging", 
+            "revision": 132, 
+            "size": 0
+        }
+    ]
+}

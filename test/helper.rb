@@ -36,3 +36,4 @@ end
 
 def stub_get(*args); stub_request(:get, *args) end
 def stub_post(*args); stub_request(:post, *args) end
+def stub_delete(*args); stub_request(:delete, *args) end
