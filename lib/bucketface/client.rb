@@ -7,7 +7,14 @@ module Bucketface
     attr_reader :login 
 
     def initialize(auth={})
-      @login = auth[:login]
+      if auth[:password].nil?
+        @login = auth[:login]
+        @token = auth[:token]
+        self.class.basic_auth(nil, nil)
+      else
+        @login = auth[:login]
+        self.class.basic_auth(@login, auth[:password])
+      end
     end
 
     def user(login=self.login)

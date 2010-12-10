@@ -1,6 +1,27 @@
 require File.expand_path(File.dirname(__FILE__)) + '/helper'
 
 class BucketfaceTest < Test::Unit::TestCase
+  context "when authenticated" do 
+    setup do 
+      @client = Bucketface::Client.new(:login => 'cored', :token => '2U812')
+    end
+
+    should "authenticate via basic auth" do 
+      stub_get('https://cored:2U812@api.bitbucket.org/1.0/users/cored/?', 'full_user.json')
+      client = Bucketface::Client.new(:login => 'cored', :password => '2U812')
+      user = client.user
+      user.is_private?.should == false
+    end
+
+    should "return followers for an user authenticated user" do 
+      stub_get('/users/cored/followers', 'followers.json')
+      followers = @client.followers
+      followers.size.should == 3
+    end
+
+    should "open an issue" 
+  end
+
   context "user resource" do 
     should "return user info" do 
       stub_get("/users/cored/", "user.json")
