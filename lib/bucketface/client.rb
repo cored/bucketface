@@ -17,6 +17,10 @@ module Bucketface
       end
     end
 
+    def self.current_state
+      self
+    end
+
     def user(login=self.login)
       get("/users/#{login}/").user
     end
