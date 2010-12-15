@@ -13,11 +13,11 @@ class BucketfaceTest < Test::Unit::TestCase
       user.is_private?.should == false
     end
 
-    should "return the authenticate client through Bucketface" do
+    should "extract api from Bucketface module" do
       stub_get('https://cored:2U812@api.bitbucket.org/1.0/users/cored/?', 'full_user.json')
       Bucketface::Client.new(:login => 'cored', :password => '2U812')
-      api = Bucketface.current_state
-      api.client.user.username.should be_eql('cored')
+      api = Bucketface::Client.api
+      api.user.username.should be_eql('cored')
     end
 
     should "return followers for an user authenticated user" do 

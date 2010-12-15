@@ -24,8 +24,6 @@ module Bucketface
 
   def self.client; Client.new end
 
-  def_delegators :client, :current_state
-
   # Users
   def_delegators :client, :user, :followers 
 

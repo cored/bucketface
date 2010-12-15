@@ -1,6 +1,6 @@
 module Bucketface
   class Client
-    include HTTParty
+    include HTTParty 
     format :json
     base_uri "https://api.bitbucket.org/1.0"
 
@@ -15,10 +15,11 @@ module Bucketface
         @login = auth[:login]
         self.class.basic_auth(@login, auth[:password])
       end
+      @@api = self
     end
 
-    def self.current_state
-      self
+    def self.api
+      @@api
     end
 
     def user(login=self.login)
