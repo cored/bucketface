@@ -71,7 +71,7 @@ module Bucketface
 
     def open_issue(repo, title, body)
       rep = Repository.new(repo)
-      post("/repositories/#{rep.user}/#{rep.to_s}/issues/", :body => {:title => title, :content => body})
+      post("/repositories/#{rep.user}/#{rep.to_s}/issues/", :body => {:title => title, :content => body, :status => 'new'})
     end
 
     def close_issue(repo, id)
