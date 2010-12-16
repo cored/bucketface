@@ -74,7 +74,7 @@ module Bucketface
       post("/repositories/#{rep.user}/#{rep.to_s}/issues/", :body => {:title => title, :content => body, :status => 'new'})
     end
 
-    def close_issue(repo, id)
+    def delete_issue(repo, id)
       repo = Repository.new(repo)
       delete("/repositories/#{repo.user}/#{repo.to_s}/issues/#{id}/")
     end

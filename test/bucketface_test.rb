@@ -34,7 +34,7 @@ class BucketfaceTest < Test::Unit::TestCase
 
     should "delete an issue" do 
       stub_delete('/repositories/cored/test-repo/issues/1/', 'close_issue.txt')
-      issue = @client.close_issue({:username => 'cored', :repo => 'test-repo'}, 1)
+      issue = @client.delete_issue({:username => 'cored', :repo => 'test-repo'}, 1)
       issue.should == "Success!"
     end
 
