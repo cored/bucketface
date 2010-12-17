@@ -43,9 +43,9 @@ Some methods require authentication so you'll need to pass a login and a passwor
 
 * Add documentation to all classes
 * Functionality for the following API resources
-** Privileges
-** Wiki
-** Source
+  * Privileges
+  * Wiki
+  * Source
 * Create examples
 * Refactor code to abstract functionality from client class
 
