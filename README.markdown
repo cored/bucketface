@@ -48,6 +48,7 @@ Some methods require authentication so you'll need to pass a login and a passwor
   * Source
 * Create examples
 * Refactor code to abstract functionality from client class
+* Add bad response handling
 
 ## Note on Patches/Pull requests
 
