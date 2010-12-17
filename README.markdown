@@ -61,7 +61,7 @@ Some methods require authentication so you'll need to pass a login and a passwor
 
 ## Credits
 
-Bucketface is based and inspired by Octopussy [Octopussy](http://github.com/pengwynn/octopussy)
+Bucketface is based and inspired by [Octopussy](http://github.com/pengwynn/octopussy)
 
 ## Copyright
 
