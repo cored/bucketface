@@ -1,0 +1,11 @@
+[
+    {
+        "repo": "cored/test-repo", 
+        "privilege": "admin", 
+        "user": {
+            "username": "mombo", 
+            "first_name": "", 
+            "last_name": ""
+        }
+    }
+]

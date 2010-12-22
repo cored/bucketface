@@ -32,27 +32,27 @@ module Bucketface
 
     def repo_followers(repo)
       repo = Repository.new(repo)
-      get("/repositories/#{repo.user}/#{repo.to_s}/followers/").followers
+      get("/repositories/#{repo.user}/#{repo}/followers/").followers
     end
 
     def issue_followers(repo, id)
       repo = Repository.new(repo)
-      get("/repositories/#{repo.user}/#{repo.to_s}/issues/#{id}/followers/").followers
+      get("/repositories/#{repo.user}/#{repo}/issues/#{id}/followers/").followers
     end
 
     def issues(repo)
       repo = Repository.new(repo)
-      get("/repositories/#{repo.user}/#{repo.to_s}/issues/").issues
+      get("/repositories/#{repo.user}/#{repo}/issues/").issues
     end
 
     def issue(repo, id)
       repo = Repository.new(repo)
-      get("/repositories/#{repo.user}/#{repo.to_s}/issues/#{id}/")
+      get("/repositories/#{repo.user}/#{repo}/issues/#{id}/")
     end
 
     def repo(repo)
       repo = Repository.new(repo)
-      get("/repositories/#{repo.user}/#{repo.to_s}/")
+      get("/repositories/#{repo.user}/#{repo}/")
     end
 
     def list_repos(login=self.login)
@@ -61,32 +61,32 @@ module Bucketface
 
     def branches(repo)
       repo = Repository.new(repo)
-      get("/repositories/#{repo.user}/#{repo.to_s}/branches/")
+      get("/repositories/#{repo.user}/#{repo}/branches/")
     end
 
     def tags(repo)
       repo = Repository.new(repo)
-      get("/repositories/#{repo.user}/#{repo.to_s}/tags/")
+      get("/repositories/#{repo.user}/#{repo}/tags/")
     end
 
     def open_issue(repo, title, body)
       rep = Repository.new(repo)
-      post("/repositories/#{rep.user}/#{rep.to_s}/issues/", :body => {:title => title, :content => body, :status => 'new'})
+      post("/repositories/#{rep.user}/#{rep}/issues/", :body => {:title => title, :content => body, :status => 'new'})
     end
 
     def delete_issue(repo, id)
       repo = Repository.new(repo)
-      delete("/repositories/#{repo.user}/#{repo.to_s}/issues/#{id}/")
+      delete("/repositories/#{repo.user}/#{repo}/issues/#{id}/")
     end
 
     def changesets(repo)
       repo = Repository.new(repo)
-      get_resource("/repositories/#{repo.user}/#{repo.to_s}/changesets/").changesets
+      get_resource("/repositories/#{repo.user}/#{repo}/changesets/").changesets
     end
 
     def changeset(repo, changeset)
       repo = Repository.new(repo)
-      get("/repositories/#{repo.user}/#{repo.to_s}/changesets/#{changeset}/")
+      get("/repositories/#{repo.user}/#{repo}/changesets/#{changeset}/")
     end
 
     def events(login=self.login)
@@ -95,7 +95,7 @@ module Bucketface
     
     def repo_events(repo)
       repo = Repository.new(repo)
-      get("/repositories/#{repo.user}/#{repo.to_s}/events/").events
+      get("/repositories/#{repo.user}/#{repo}/events/").events
     end
 
     private

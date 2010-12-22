@@ -38,7 +38,9 @@ class BucketfaceTest < Test::Unit::TestCase
       issue.should == "Success!"
     end
 
-    should "update an issue"
+    should "reopen an issue"
+
+    should "close an issue"
 
   end
 
