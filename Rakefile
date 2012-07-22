@@ -1,10 +1,8 @@
-require 'bundler'
-Bundler::GemHelper.install_tasks
+require 'bundler/gem_tasks'
+require 'rspec/core/rake_task'
 
-require 'rake/testtask'
-Rake::TestTask.new(:test) do |test|
-  Dir[File.dirname(__FILE__) + "/test/**/*_test.rb"].each do |path|
-    require_relative path
-  end
-  MiniTest::Unit.autorun
-end
+RSpec::Core::RakeTask.new
+
+task :default => :spec
+task :test => :spec
+
