@@ -1,7 +1,7 @@
 require 'test/unit'
 require 'pathname'
 
-require 'shoulda'
+require 'minitest/autorun'
 require 'matchy'
 require 'mocha'
 require 'fakeweb'
@@ -12,7 +12,18 @@ require 'bucketface'
 
 FakeWeb.allow_net_connect = false
 
-class Test::Unit::TestCase
+# Code from mini_shoulda https://github.com/metaskills/mini_shoulda
+class MiniTest::Spec < MiniTest::Unit::TestCase
+  class << self
+    alias :setup    :before
+    alias :teardown :after
+    alias :should   :it
+    alias :context  :describe
+  end
+  
+  def self.should_eventually(desc)
+    it("should eventually #{desc}") { skip("Should eventually #{desc}") }
+  end
 end
 
 def fixture_file(filename)

@@ -1,6 +1,6 @@
 require File.expand_path(File.dirname(__FILE__)) + '/helper'
 
-class BucketfaceTest < Test::Unit::TestCase
+class BucketfaceTest < MiniTest::Spec
   context "when authenticated" do 
     setup do 
       @client = Bucketface::Client.new(:login => 'cored', :token => '2U812')
