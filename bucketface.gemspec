@@ -4,8 +4,8 @@ require File.expand_path('../lib/bucketface/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Rafael George"]
   gem.email         = ["george.rafael@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Minimalistic wrapper for Bitbucket API}
+  gem.summary       = gem.description
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
@@ -14,4 +14,10 @@ Gem::Specification.new do |gem|
   gem.name          = "bucketface"
   gem.require_paths = ["lib"]
   gem.version       = Bucketface::VERSION
+
+  gem.add_development_dependency 'rspec'
+  gem.add_development_dependency 'guard'
+  gem.add_development_dependency 'guard-rspec'
+  gem.add_development_dependency 'libnotify'
+  gem.add_development_dependency 'rb-inotify'
 end
