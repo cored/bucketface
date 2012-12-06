@@ -1,5 +1,1 @@
-
-*.swp
-pkg/*
-*.gem
-.bundle
+*.un~
