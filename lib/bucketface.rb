@@ -1,5 +1,11 @@
 require "bucketface/version"
+require "bucketface/client"
 
 module Bucketface
-  # Your code goes here...
+  class << self
+
+    def new(attributes={})
+      Bucketface::Client.new(attributes)
+    end
+  end
 end
